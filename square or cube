@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class SquareOrCube {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Taking input from user
+        System.out.print("Enter a number: ");
+        double number = scanner.nextDouble();
+
+        // Asking user for their choice
+        System.out.print("Enter '1' for square & '2' for cube: ");
+        int choice = scanner.nextInt();
+        if (choice == 1) {
+            double square = number * number;
+            System.out.println("The square of " + number + " is: " + square);
+        } else if (choice == 2) {
+            double cube = number * number * number;
+            System.out.println("The cube of " + number + " is: " + cube);
+        } else {
+            System.out.println("Invalid choice! Please enter either '1' & '2'.");
+        }
+
+        scanner.close();
+    }
+}
